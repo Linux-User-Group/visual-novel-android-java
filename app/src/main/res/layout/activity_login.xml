@@ -18,7 +18,8 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@color/white">
+            app:cardBackgroundColor="@color/card"
+            app:backgroundTint="@null">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -34,7 +35,7 @@
                     android:textSize="17dp"
                     android:padding="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/lobster"/>
+                    android:fontFamily="@font/nunito_bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -47,7 +48,9 @@
                         android:layout_height="wrap_content"
                         android:hint="Username ..."
                         android:paddingLeft="30dp"
-                        android:paddingRight="30dp">
+                        android:paddingRight="30dp"
+                        android:textColorHint="@color/secondary"
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -66,7 +69,8 @@
                         android:layout_marginTop="17dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
-                        android:layout_marginBottom="17dp">
+                        android:layout_marginBottom="17dp"
+                        android:textColorHint="@color/secondary">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -86,10 +90,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Login"
-                    android:fontFamily="@font/lobster"
+                    android:fontFamily="@font/nunito_bold"
                     android:layout_marginBottom="17dp"
                     android:layout_marginTop="17dp"
                     android:background="@drawable/bg_button"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/white"
                     />
 
             </LinearLayout>

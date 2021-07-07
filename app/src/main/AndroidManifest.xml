@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CantMakeYouLoveMe">
-        <activity android:name=".Home" android:screenOrientation="landscape"></activity>
+        <activity android:name=".Story2" android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Home"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Story1"
             android:screenOrientation="landscape" />

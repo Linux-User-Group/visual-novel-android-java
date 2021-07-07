@@ -40,10 +40,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Mulai Bermain"
-            android:fontFamily="@font/lobster"
+            android:fontFamily="@font/nunito_bold"
             android:layout_marginBottom="17dp"
             android:layout_marginTop="17dp"
             android:background="@drawable/bg_button"
+            app:backgroundTint="@null"
+            android:textColor="@color/white"
             />
 
         <Button
@@ -52,9 +54,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Credit"
-            android:fontFamily="@font/lobster"
+            android:fontFamily="@font/nunito_bold"
             android:layout_marginBottom="17dp"
-            android:background="@drawable/bg_credit"
+            android:background="@drawable/bg_button"
+            app:backgroundTint="@null"
+            android:textColor="@color/white"
             />
 
     </LinearLayout>
