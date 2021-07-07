@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pop"
+    tools:context=".PopUp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yakin ingin keluar ?"
+            android:textSize="18dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#232323"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:layout_marginTop="16dp"
+                android:id="@+id/btnTidak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tidak"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/bg_button_success"
+                app:backgroundTint="@null"
+                android:textColor="@color/white"
+                android:layout_marginRight="30dp"
+                />
+
+            <Button
+                android:layout_marginTop="16dp"
+                android:id="@+id/btnIya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Keluar"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/bg_button_danger"
+                app:backgroundTint="@null"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

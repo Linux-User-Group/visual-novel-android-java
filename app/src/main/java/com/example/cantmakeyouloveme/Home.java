@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class Home extends AppCompatActivity {
 
-    Button btnMulai;
+    Button btnMulai, btnKeluar;
 
     MediaPlayer audio;
 
@@ -30,11 +30,20 @@ public class Home extends AppCompatActivity {
         audio.start();
 
         btnMulai = (Button)findViewById(R.id.btnMulai);
+        btnKeluar = (Button)findViewById(R.id.btnKeluar);
+
         btnMulai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Story1.class));
 
+            }
+        });
+
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PopUp.class));
             }
         });
     }
