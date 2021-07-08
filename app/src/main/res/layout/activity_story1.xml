@@ -24,6 +24,8 @@
             android:src="@drawable/male_sad_winter"/>
 
         <LinearLayout
+            android:id="@+id/textStory"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

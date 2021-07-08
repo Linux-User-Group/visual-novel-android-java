@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CantMakeYouLoveMe"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Register"
+        <activity android:name=".PopUpRegister"></activity>
+        <activity
+            android:name=".Register"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.CantMakeYouLoveMe.PopMe"
-            ></activity>
+            android:theme="@style/Theme.CantMakeYouLoveMe.PopMe" />
         <activity
             android:name=".PopUpLogin"
             android:screenOrientation="landscape"
