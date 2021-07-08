@@ -18,57 +18,48 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class Login extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
-    private String URL = "http://192.168.1.7/novel/login.php";
+    private String URL = "http://192.168.1.7/novel/register.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;
-    String nama, pass, login;
+    String nama, pass, email;
 
-    TextInputEditText txtNama, txtPass;
-    TextView txtStatus, txtRegister;
-    Button btnLogin;
+    TextInputEditText txtNama, txtEmail, txtPass;
+    TextView txtStatus;
+    Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
         txtNama = (TextInputEditText)findViewById(R.id.txtNama);
+        txtEmail = (TextInputEditText)findViewById(R.id.txtEmail);
         txtPass = (TextInputEditText)findViewById(R.id.txtPass);
         txtStatus = (TextView)findViewById(R.id.txtStatus);
-        txtRegister = (TextView)findViewById(R.id.txtRegister);
-        btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnRegister = (Button)findViewById(R.id.btnRegister);
 
-        txtRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Register.class));
-            }
-        });
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 nama = txtNama.getText().toString().trim();
+                email = txtEmail.getText().toString().trim();
                 pass = txtPass.getText().toString().trim();
 
-                if (nama.equals("") || pass.equals("")){
+                if (nama.equals("") || email.equals("") || pass.equals("")){
 
-                    txtStatus.setText("Nama dan password jangan kosong");
+                    txtStatus.setText("Semua kolom jangan kosong");
 
                 } else {
-                    stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
+                    stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             startActivity(new Intent(getApplicationContext(), PopUpLogin.class));
@@ -84,6 +75,7 @@ public class Login extends AppCompatActivity {
                         protected Map<String, String> getParams() throws AuthFailureError {
                             Map<String, String> data = new HashMap<>();
                             data.put("nama", nama);
+                            data.put("email", email);
                             data.put("password", pass);
                             return data;
                         }
@@ -96,6 +88,5 @@ public class Login extends AppCompatActivity {
 
             }
         });
-
     }
 }

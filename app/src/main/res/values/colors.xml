@@ -10,4 +10,5 @@
     <color name="primary">#C79D67</color>
     <color name="card">#EBEBEB</color>
     <color name="secondary">#677381</color>
+    <color name="success">#007d51</color>
 </resources>

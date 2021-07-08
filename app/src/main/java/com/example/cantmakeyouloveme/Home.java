@@ -44,6 +44,8 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), PopUp.class));
+                audio.setVolume(0,0);
+                audio.stop();
             }
         });
     }

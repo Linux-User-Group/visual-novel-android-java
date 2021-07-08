@@ -2,23 +2,19 @@ package com.example.cantmakeyouloveme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 
-public class PopUp extends Activity {
-
-    Button btnTidak, btnIya;
+public class PopUpLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pop_up);
+        setContentView(R.layout.activity_pop_up_login);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -26,10 +22,7 @@ public class PopUp extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        btnIya = (Button)findViewById(R.id.btnIya);
-        btnTidak = (Button)findViewById(R.id.btnTidak);
-
-        getWindow().setLayout((int)(width*.6), (int)(height*.5));
+        getWindow().setLayout((int)(width*.7), (int)(height*.6));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -38,21 +31,13 @@ public class PopUp extends Activity {
 
         getWindow().setAttributes(params);
 
-
-        btnTidak.setOnClickListener(new View.OnClickListener() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
+            public void run() {
+                startActivity(new Intent(getApplicationContext(), Home.class));
                 finish();
             }
-        });
-
-        btnIya.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-//                System.exit(0);
-                moveTaskToBack(true);
-            }
-        });
+        }, 1000L);
     }
 }
