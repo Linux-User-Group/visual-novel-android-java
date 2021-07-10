@@ -129,7 +129,7 @@ public class Story7 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        audio = MediaPlayer.create(this, R.raw.road_sound);
+        audio = MediaPlayer.create(this, R.raw.sound2);
         audio.setVolume(1,1);
         audio.start();
 

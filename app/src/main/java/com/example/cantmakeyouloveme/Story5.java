@@ -128,7 +128,7 @@ public class Story5 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        audio = MediaPlayer.create(this, R.raw.kamar_sound);
+        audio = MediaPlayer.create(this, R.raw.radio_sound);
         audio.setVolume(1,1);
         audio.start();
 
