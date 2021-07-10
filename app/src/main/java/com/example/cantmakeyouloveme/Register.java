@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    private String URL = "http://192.168.1.7/novel/register.php";
+    private String URL = "http://192.168.1.7/novel/auth/register.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;

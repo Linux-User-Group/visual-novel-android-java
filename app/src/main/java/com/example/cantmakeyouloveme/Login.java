@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
 
-    private String URL = "http://192.168.1.7/novel/login.php";
+    private String URL = "http://192.168.1.7/novel/auth/login.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;

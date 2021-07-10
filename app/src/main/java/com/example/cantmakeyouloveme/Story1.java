@@ -3,6 +3,7 @@ package com.example.cantmakeyouloveme;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -33,15 +34,14 @@ import java.util.Map;
 public class Story1 extends AppCompatActivity {
 
     private TextView txtStatus;
-    private ListView dataMahasiswa;
 
-    private String URL = "http://192.168.1.7/novel/story1.php";
+    private String URL = "http://192.168.1.7/novel/story/story1.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;
 
     private JSONObject jsonObj, jsonData;
-    private JSONArray jsonMhs;
+    private JSONArray jsonStory;
     private String id, category, text;
     int i;
 
@@ -56,9 +56,9 @@ public class Story1 extends AppCompatActivity {
     BankStory bankStory;
     ControllerStory controllerStory;
 
+    MediaPlayer audio;
 
     public void getStory(){
-
 
         stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
@@ -69,11 +69,11 @@ public class Story1 extends AppCompatActivity {
 //                txtStatus.setText(response.toString());
                 try {
                     jsonObj = new JSONObject(response);
-                    jsonMhs = jsonObj.getJSONArray("data");
+                    jsonStory = jsonObj.getJSONArray("data");
 //                    System.out.println(jsonMhs.toString());
 
-                    for (int i = 0; i < jsonMhs.length(); i++){
-                        jsonData = jsonMhs.getJSONObject(i);
+                    for (int i = 0; i < jsonStory.length(); i++){
+                        jsonData = jsonStory.getJSONObject(i);
                         id = jsonData.getString("id");
                         category = jsonData.getString("category");
                         text = jsonData.getString("text");
@@ -129,6 +129,10 @@ public class Story1 extends AppCompatActivity {
 
 //        text = "Malam hari dikamar “join discord” ngobrol tugas lalu april mengajak untuk keluar ke rumah adel";
 
+        audio = MediaPlayer.create(this, R.raw.kamar_sound);
+        audio.setVolume(1,1);
+        audio.start();
+
         txtStory = (TextView)findViewById(R.id.txtStory);
         maleChar1 = (ImageView)findViewById(R.id.maleChar1);
         textStory = (LinearLayout)findViewById(R.id.textStory);
@@ -151,6 +155,9 @@ public class Story1 extends AppCompatActivity {
                     i++;
                 } else {
                     startActivity(new Intent(getApplicationContext(), Story2.class));
+                    audio.setVolume(0,0);
+                    audio.stop();
+
                 }
 
             }
