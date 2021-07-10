@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CantMakeYouLoveMe"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Story5" android:screenOrientation="landscape"></activity>
+        <activity android:name=".Story7" android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Story6"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Story5"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Story4"
             android:screenOrientation="landscape" />

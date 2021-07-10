@@ -128,6 +128,10 @@ public class Story5 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        audio = MediaPlayer.create(this, R.raw.kamar_sound);
+        audio.setVolume(1,1);
+        audio.start();
+
         txtStory = (TextView)findViewById(R.id.txtStory);
         maleChar1 = (ImageView)findViewById(R.id.maleChar1);
         femaleChar1 = (ImageView)findViewById(R.id.femaleChar1);
@@ -155,7 +159,7 @@ public class Story5 extends AppCompatActivity {
                     txtStory.setText(controllerStory.getArrayList().get(i).getText());
                     i++;
                 } else {
-                    startActivity(new Intent(getApplicationContext(), Story5.class));
+                    startActivity(new Intent(getApplicationContext(), Story6.class));
                     audio.setVolume(0,0);
                     audio.stop();
 
