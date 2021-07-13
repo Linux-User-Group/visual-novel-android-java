@@ -33,7 +33,11 @@ import java.util.Map;
 public class Story2 extends AppCompatActivity {
     private TextView txtStatus;
 
-    private String URL = "http://192.168.1.7/novel/story/story2.php";
+    //local server
+//    private String URL = "http://192.168.1.7/novel/story/story2.php";
+
+    //online serve
+    private String URL = "https://novelfaris.000webhostapp.com/story/story2.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;

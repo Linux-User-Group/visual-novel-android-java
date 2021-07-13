@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Story7"
-    android:background="@drawable/Bg_ijo">
+    android:background="@drawable/bg_kamar_male_malam">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,28 +16,28 @@
         android:paddingBottom="14dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center">-->
 
-            <ImageView
-                android:id="@+id/maleChar1"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:src="@drawable/male_ketawa2"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/maleChar1"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/male_ketawa2"/>-->
 
-            <ImageView
-                android:id="@+id/femaleChar1"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:src="@drawable/female_ketawa"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/femaleChar1"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/female_ketawa"/>-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
 
         <LinearLayout
@@ -46,12 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/bg_text2">
+            android:paddingTop="5dp"
+            android:background="@drawable/bg_text1">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lail dan Apweel"
+                android:text="Prolouge"
                 android:textStyle="bold"
                 android:textSize="12dp"
                 android:paddingTop="4dp"

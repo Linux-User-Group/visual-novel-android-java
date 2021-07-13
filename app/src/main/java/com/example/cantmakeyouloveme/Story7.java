@@ -34,7 +34,11 @@ public class Story7 extends AppCompatActivity {
 
     private TextView txtStatus;
 
-    private String URL = "http://192.168.1.7/novel/story/story7.php";
+    //local server
+//    private String URL = "http://192.168.1.7/novel/story/story7.php";
+
+    //online serve
+    private String URL = "https://novelfaris.000webhostapp.com/story/story7.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;
@@ -160,7 +164,7 @@ public class Story7 extends AppCompatActivity {
                     txtStory.setText(controllerStory.getArrayList().get(i).getText());
                     i++;
                 } else {
-                    startActivity(new Intent(getApplicationContext(), Story7.class));
+                    startActivity(new Intent(getApplicationContext(), Story8.class));
                     audio.setVolume(0,0);
                     audio.stop();
 
