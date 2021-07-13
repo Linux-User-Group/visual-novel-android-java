@@ -30,13 +30,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Story9 extends AppCompatActivity {
+public class Story17 extends AppCompatActivity {
+
+    private TextView txtStatus;
 
     //local server
-//    private String URL = "http://192.168.1.7/novel/story/story9.php";
+//    private String URL = "http://192.168.1.7/novel/story/story17.php";
 
     //online serve
-    private String URL = "https://novelfaris.000webhostapp.com/story/story9.php";
+    private String URL = "https://novelfaris.000webhostapp.com/story/story17.php";
 
     private StringRequest stringRequest;
     private RequestQueue requestQueue;
@@ -54,7 +56,7 @@ public class Story9 extends AppCompatActivity {
     TextView txtStory;
     LinearLayout textStory;
 
-    ImageView maleChar1;
+    ImageView maleChar1, femaleChar1;
 
     BankStory bankStory;
     ControllerStory controllerStory;
@@ -118,6 +120,7 @@ public class Story9 extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         controllerStory = new ControllerStory();
@@ -126,27 +129,31 @@ public class Story9 extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_story9);
+        setContentView(R.layout.activity_story17);
 
         Intent intent = getIntent();
 
-//        text = "Malam hari dikamar “join discord” ngobrol tugas lalu april mengajak untuk keluar ke rumah adel";
-
-        audio = MediaPlayer.create(this, R.raw.sound2);
+        audio = MediaPlayer.create(this, R.raw.main_sound);
         audio.setVolume(1,1);
         audio.start();
 
         txtStory = (TextView)findViewById(R.id.txtStory);
         maleChar1 = (ImageView)findViewById(R.id.maleChar1);
+        femaleChar1 = (ImageView)findViewById(R.id.femaleChar1);
         textStory = (LinearLayout)findViewById(R.id.textStory);
 
         slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
 
         maleChar1.setAnimation(slideDown);
+        femaleChar1.setAnimation(slideDown);
         getStory();
 
-//        System.out.println(controllerStory.getArrayList().get(0).getText());
-
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                txtStory.setText(text);
+            }
+        }, 500);
     }
 
     public void clickStory(ControllerStory cr){
@@ -157,7 +164,7 @@ public class Story9 extends AppCompatActivity {
                     txtStory.setText(controllerStory.getArrayList().get(i).getText());
                     i++;
                 } else {
-                    startActivity(new Intent(getApplicationContext(), Story10.class));
+                    startActivity(new Intent(getApplicationContext(), Home.class));
                     audio.setVolume(0,0);
                     audio.stop();
 

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Story13"
+    android:background="@drawable/bg_cafe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/maleChar1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/male_senyum"/>
+
+            <ImageView
+                android:id="@+id/femaleChar1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/female_senyum"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/textStory"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_text2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lail dan Apweel"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="16dp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/txtStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingTop="16dp"
+                android:paddingRight="18dp"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_reguler"
+                />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="120dp"-->
+            <!--                android:paddingRight="14dp"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:layout_gravity="bottom"-->
+            <!--                android:gravity="bottom">-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/retangle"-->
+            <!--                    android:layout_gravity="end"/>-->
+            <!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
