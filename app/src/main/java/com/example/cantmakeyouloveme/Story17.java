@@ -133,7 +133,7 @@ public class Story17 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        audio = MediaPlayer.create(this, R.raw.main_sound);
+        audio = MediaPlayer.create(this, R.raw.sound2);
         audio.setVolume(1,1);
         audio.start();
 
@@ -144,8 +144,8 @@ public class Story17 extends AppCompatActivity {
 
         slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
 
-        maleChar1.setAnimation(slideDown);
-        femaleChar1.setAnimation(slideDown);
+//        maleChar1.setAnimation(slideDown);
+//        femaleChar1.setAnimation(slideDown);
         getStory();
 
         new Handler().postDelayed(new Runnable(){

@@ -144,8 +144,8 @@ public class Story7 extends AppCompatActivity {
 
         slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
 
-        maleChar1.setAnimation(slideDown);
-        femaleChar1.setAnimation(slideDown);
+//        maleChar1.setAnimation(slideDown);
+//        femaleChar1.setAnimation(slideDown);
         getStory();
 
         new Handler().postDelayed(new Runnable(){

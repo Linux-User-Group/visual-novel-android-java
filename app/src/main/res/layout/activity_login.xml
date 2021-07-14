@@ -49,6 +49,7 @@
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:textColorHint="@color/secondary"
+                        app:hintTextColor="@color/secondary"
                         >
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -69,7 +70,8 @@
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:layout_marginBottom="17dp"
-                        android:textColorHint="@color/secondary">
+                        android:textColorHint="@color/secondary"
+                        app:hintTextColor="@color/secondary">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txtPass"
