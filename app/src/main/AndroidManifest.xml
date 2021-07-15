@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CantMakeYouLoveMe"
         android:usesCleartextTraffic="true">
-<!--        <activity android:name=".Credit" android:screenOrientation="landscape"></activity>-->
+        <activity android:name=".Credit" android:screenOrientation="landscape"></activity>
         <activity
             android:name=".Story17"
             android:screenOrientation="landscape" />
@@ -87,7 +87,7 @@
             android:name=".Login"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Credit"
+            android:name=".MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
