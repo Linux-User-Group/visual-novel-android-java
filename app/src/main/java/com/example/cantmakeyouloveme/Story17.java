@@ -164,7 +164,7 @@ public class Story17 extends AppCompatActivity {
                     txtStory.setText(controllerStory.getArrayList().get(i).getText());
                     i++;
                 } else {
-                    startActivity(new Intent(getApplicationContext(), Home.class));
+                    startActivity(new Intent(getApplicationContext(), Credit.class));
                     audio.setVolume(0,0);
                     audio.stop();
 
